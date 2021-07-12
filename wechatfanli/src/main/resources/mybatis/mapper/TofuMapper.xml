@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jjld.coupon.web.mapper.TofuMapper">
+  <resultMap id="BaseResultMap" type="com.jjld.coupon.web.entity.Tofu">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="position" jdbcType="TINYINT" property="position" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="img" jdbcType="VARCHAR" property="img" />
+    <result column="url" jdbcType="VARCHAR" property="url" />
+    <result column="sequ" jdbcType="INTEGER" property="sequ" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="deleted" jdbcType="TINYINT" property="deleted" />
+  </resultMap>
+</mapper>

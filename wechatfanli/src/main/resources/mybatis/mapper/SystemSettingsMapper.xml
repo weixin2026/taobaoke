@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jjld.coupon.web.mapper.SystemSettingsMapper">
+    <resultMap type="com.jjld.coupon.web.entity.SystemSettings" id="resultMap">
+        <id column="id" property="id"/>
+        <result  column="apikey" property="apikey"/>
+        <result  column="authkey" property="authkey"/>
+        <result  column="taoauthid" property="taoauthid"/>
+        <result  column="pid" property="pid"/>
+    </resultMap>
+     
+	<select id="getSystemSettings" resultMap="resultMap">
+         select * from tbl_systemsettings
+         limit 1;
+	</select>
+	
+	<update id="update">
+	     update tbl_systemsettings
+	     set apikey = #{apikey},
+	     authkey = #{authkey},
+	     taoauthid = #{taoauthid},
+	     pid = #{pid}
+	     where id =#{id}
+	</update>
+	
+	<insert id="insert">
+	     insert into tbl_systemsettings (apikey,authkey,taoauthid,pid)
+	     values(#{apikey},#{authkey},#{taoauthid},#{pid})
+	</insert>
+	 
+</mapper>

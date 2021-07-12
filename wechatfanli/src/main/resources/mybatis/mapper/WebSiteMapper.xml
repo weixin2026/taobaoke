@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jjld.coupon.web.mapper.WebSiteMapper">
+    <resultMap type="com.jjld.coupon.web.entity.WebSite" id="resultMap">
+        <id column="id" property="id"/>
+        <result  column="webname" property="webname"/>
+        <result  column="domainname" property="domainname"/>
+        <result  column="logo" property="logo"/>
+        <result  column="qrcode" property="qrcode"/>
+        <result  column="aboutus" property="aboutus"/>
+        <result  column="copyright" property="copyright"/>
+        <result  column="title" property="title"/>
+        <result  column="description" property="description"/>
+        <result  column="keywords" property="keywords"/>
+        <result  column="metavalidate" property="metavalidate"/>
+        <result  column="baidupushurl" property="baidupushurl"/>
+    </resultMap>
+     
+	<select id="getWebSites" resultMap="resultMap">
+         select * from tbl_website
+         limit 1;
+	</select>
+	
+	<update id="update">
+	     update tbl_website
+	     set webname = #{webname},
+	     domainname = #{domainname},
+	     logo = #{logo},
+	     qrcode = #{qrcode},
+	     aboutus = #{aboutus},
+	     copyright = #{copyright},
+	     title = #{title},
+	     description = #{description},
+	     keywords = #{keywords}, 
+	     baidupushurl =#{baidupushurl},
+	     metavalidate = #{metavalidate}
+	</update>
+	
+	<insert id="insert">
+	     insert into tbl_website (webname,domainname,logo,qrcode,aboutus,copyright,title,description,keywords,baidupushurl,metavalidate)
+	     values(#{webname},#{domainname},#{logo},#{qrcode},#{aboutus},#{copyright},#{title},#{description},#{keywords},#{baidupushurl},#{metavalidate})
+	</insert>
+	 
+</mapper>

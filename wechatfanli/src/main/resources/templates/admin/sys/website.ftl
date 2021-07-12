@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+    <head>
+        <title>网站设置</title>
+        <#include "/admin/common/common.ftl">
+        <script type="text/javascript" src="/static/xadmin/js/jquery.min.js"></script>
+    </head>
+    <body style="background-color:#fff">
+        <div class="layui-fluid">
+            <div class="layui-row">
+                <form class="layui-form" lay-filter="example">
+                    <input type="hidden" name="tokens" value="${tokens!}">
+                    <input type="hidden" id="id"  name="id" value="${(entity.id)!}">
+                     
+                    <div class="layui-form-item">
+                          <label class="layui-form-label">
+                              <span class="x-red">*</span>网站名称：
+                         </label>
+                        <div class="layui-input-inline">
+                              <input type="text" name="webname" required="" lay-verify="required"
+                                autocomplete="off" class="layui-input" value="${(entity.webname)!}" maxlength="100" >
+                          </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            <span class="x-red">*</span>网站域名：
+                        </label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="domainname" required="" lay-verify="required"
+                              autocomplete="off" class="layui-input" value="${(entity.domainname)!}" maxlength="100">
+                        </div>
+                    </div>
+                    
+                      
+                   <div class="layui-form-item">
+	                <label class="layui-form-label">
+	                   <span class="x-red">*</span>网站logo：
+	                </label>
+	                <div class="layui-input-inline">
+	                  <input name="logo" required="" lay-verify="required" id="imgPath1" placeholder="logo地址"  value="${entity.logo!}" class="layui-input">
+	                </div>
+	                 
+	                <div class="layui-input-inline layui-btn-container" style="width: auto;">
+	                  <input type="file" id="fileToUpload1" class="layui-btn"  style="width: 85px;background: white;" />
+	                </div>
+	                
+	               </div>
+                    
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            <span class="x-red">*</span>首页标题：
+                        </label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="title" required="" lay-verify="required"
+                              autocomplete="off" class="layui-input" value="${(entity.title)!}" maxlength="200">
+                        </div>
+                    </div>
+                    
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            <span class="x-red">*</span>首页关键词：
+                        </label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="keywords" required="" lay-verify="required"
+                              autocomplete="off" class="layui-input" value="${(entity.keywords)!}" maxlength="200">
+                        </div>
+                    </div>
+                    
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            <span class="x-red">*</span>首页描述：
+                        </label>
+                        <div class="layui-input-inline">
+				                <textarea placeholder="请输入内容" autocomplete="off" required="" lay-verify="required"  style="width:300px;height:100px;"   name="description" class="layui-textarea">${(entity.description)!}</textarea>
+				        </div>
+                    </div>
+                    
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            <span class="x-red">*</span>版权信息：
+                        </label>
+                        <div class="layui-input-inline">
+                              <textarea placeholder="请输入内容" autocomplete="off" required="" lay-verify="required" style="width:300px;height:150px;"  name="copyright" class="layui-textarea">${(entity.copyright)!}</textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            <span class="x-red">*</span>mate验证：
+                        </label>
+                        <div class="layui-input-inline">
+                              <textarea placeholder="请输入内容" autocomplete="off" required="" lay-verify="required" style="width:300px;height:100px;"  name="metavalidate" class="layui-textarea">${(entity.metavalidate)!}</textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            <span class="x-red">*</span>百度站长自动推送URL：
+                        </label>
+                        <div class="layui-input-inline">
+                              <textarea placeholder="请输入内容" autocomplete="off" required="" lay-verify="required" style="width:300px;height:50px;"  name="baidupushurl" class="layui-textarea">${(entity.baidupushurl)!}</textarea>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="layui-form-item">
+                        <label class="layui-form-label"></label>
+                        <button class="layui-btn" lay-filter="add" lay-submit="">提交</button>
+                    </div>
+              </form>
+            </div>
+        </div>
+       
+        <script type="text/javascript">
+ 
+        layui.use(['form', 'layer'], function () {
+	                var form = layui.form;
+	                var layer = layui.layer;
+	                var $ = layui.$;
+	             
+	           
+				$('#fileToUpload1').change(function(){
+					var formdata = new FormData();
+					url = "/cms/imageUpload";
+					var fileObj = $(this).get(0).files;
+					formdata.append("myfile", fileObj[0]);
+					jQuery.ajax({
+						url : url,
+						type : 'post',
+						data : formdata,
+						cache : false,
+						contentType : false,
+						processData : false,
+						dataType : "json",
+						success : function(data) {
+							if (data.code == 200) {
+								$("#imgPath1").val(data.url);
+								layer.msg('上传成功');
+							}else{
+								layer.msg('上传失败');
+							}
+						}
+					});
+				})
+			      
+	                
+                 form.on('submit(add)', function (data) {
+                    $('.layui-form-item .layui-btn').prop('disabled', true);
+                    $('.layui-form-item .layui-btn').text('提交中...');
+                    var url = '/cms/website/addOrUpdate';
+                    $.ajax({
+                        type: 'post',
+                        url: url,
+                        data: data.field,
+                        dataType: 'json',
+                        success: function (data) {
+                            if (data.code !== 0) {
+                                $('.layui-form-item .layui-btn').prop('disabled', false);
+                                $('.layui-form-item .layui-btn').text('提交');
+                                layer.msg(data.msg);
+                                return false;
+                            }
+                            xadmin.close();
+                            layer.closeAll();
+                            parent.reload();
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            $('.layui-form-item .layui-btn').prop('disabled', false);
+                            $('.layui-form-item .layui-btn').text('提交');
+                            layer.msg('系统异常');
+                        }
+                    });
+                    return false;
+                });
+            });
+
+        </script>
+        <style type="text/css">
+            .layui-form-label {
+                width: 200px;
+            }
+        </style>
+    </body>
+</html>

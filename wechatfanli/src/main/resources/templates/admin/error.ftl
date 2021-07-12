@@ -1,0 +1,17 @@
+<!doctype html>
+<html class="x-admin-sm">
+<head>
+    <title>出错啦</title>
+    <#include "/admin/common/common.ftl">
+</head>
+<body>
+    <div class="layui-container">
+        <div class="fly-panel">
+            <div class="fly-none">
+                <h2><i class="layui-icon layui-icon-404"></i></h2>
+                <p>页面或者数据被<a href="/"> 纸飞机 </a>运到火星了，啥都看不到了…</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

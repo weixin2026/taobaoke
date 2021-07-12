@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jjld.coupon.mapper.GoodsMapper">
+	<resultMap id="BaseResultMap" type="com.jjld.coupon.web.entity.Goods">
+		<!--
+          WARNING - @mbg.generated
+        -->
+		<id column="id" jdbcType="INTEGER" property="id" />
+		<result column="product_id" jdbcType="BIGINT" property="productId" />
+		<result column="itemid" jdbcType="BIGINT" property="itemid" />
+		<result column="itemtitle" jdbcType="VARCHAR" property="itemtitle" />
+		<result column="itemshorttitle" jdbcType="VARCHAR" property="itemshorttitle" />
+		<result column="itemdesc" jdbcType="VARCHAR" property="itemdesc" />
+		<result column="itemprice" jdbcType="DECIMAL" property="itemprice" />
+		<result column="itemsale" jdbcType="BIGINT" property="itemsale" />
+		<result column="itemsale2" jdbcType="BIGINT" property="itemsale2" />
+		<result column="todaysale" jdbcType="BIGINT" property="todaysale" />
+		<result column="itempic" jdbcType="VARCHAR" property="itempic" />
+		<result column="itempic_copy" jdbcType="VARCHAR" property="itempicCopy" />
+		<result column="taobao_image" jdbcType="VARCHAR" property="taobaoImage" />
+		<result column="fqcat" jdbcType="TINYINT" property="fqcat" />
+		<result column="itemendprice" jdbcType="DECIMAL" property="itemendprice" />
+		<result column="shoptype" jdbcType="VARCHAR" property="shoptype" />
+		<result column="couponurl" jdbcType="VARCHAR" property="couponurl" />
+		<result column="couponmoney" jdbcType="DECIMAL" property="couponmoney" />
+		<result column="is_brand" jdbcType="TINYINT" property="isBrand" />
+		<result column="is_live" jdbcType="TINYINT" property="isLive" />
+		<result column="guide_article" jdbcType="VARCHAR" property="guideArticle" />
+		<result column="videoid" jdbcType="BIGINT" property="videoid" />
+		<result column="activity_type" jdbcType="VARCHAR" property="activityType" />
+		<result column="planlink" jdbcType="VARCHAR" property="planlink" />
+		<result column="userid" jdbcType="BIGINT" property="userid" />
+		<result column="sellernick" jdbcType="VARCHAR" property="sellernick" />
+		<result column="shopname" jdbcType="VARCHAR" property="shopname" />
+		<result column="tktype" jdbcType="VARCHAR" property="tktype" />
+		<result column="tkrates" jdbcType="DECIMAL" property="tkrates" />
+		<result column="cuntao" jdbcType="TINYINT" property="cuntao" />
+		<result column="tkmoney" jdbcType="DECIMAL" property="tkmoney" />
+		<result column="couponreceive2" jdbcType="BIGINT" property="couponreceive2" />
+		<result column="couponsurplus" jdbcType="BIGINT" property="couponsurplus" />
+		<result column="couponnum" jdbcType="BIGINT" property="couponnum" />
+		<result column="couponexplain" jdbcType="VARCHAR" property="couponexplain" />
+		<result column="couponstarttime" jdbcType="BIGINT" property="couponstarttime" />
+		<result column="couponendtime" jdbcType="BIGINT" property="couponendtime" />
+		<result column="start_time" jdbcType="BIGINT" property="startTime" />
+		<result column="end_time" jdbcType="BIGINT" property="endTime" />
+		<result column="starttime" jdbcType="BIGINT" property="starttime" />
+		<result column="report_status" jdbcType="TINYINT" property="reportStatus" />
+		<result column="general_index" jdbcType="BIGINT" property="generalIndex" />
+		<result column="seller_name" jdbcType="VARCHAR" property="sellerName" />
+		<result column="discount" jdbcType="DECIMAL" property="discount" />
+		<result column="deposit" jdbcType="DECIMAL" property="deposit" />
+		<result column="deposit_deduct" jdbcType="DECIMAL" property="depositDeduct" />
+		<result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+		<result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+		<result column="deleted" jdbcType="TINYINT" property="deleted" />
+	</resultMap>
+</mapper>

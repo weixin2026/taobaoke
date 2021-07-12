@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jjld.coupon.web.mapper.SaveMoneyMapper">
+    <resultMap type="com.jjld.coupon.web.entity.SaveMoney" id="resultMap">
+        <id column="id" property="id"/>
+        <result  column="status" property="status"/>
+        <result  column="name" property="name"/>
+        <result  column="banner" property="banner"/>
+        <result  column="link" property="link"/>
+        <result  column="create_time" property="createTime"/>
+    </resultMap>
+      
+     
+	<select id="findSaveMoneyByid" resultType="com.jjld.coupon.web.entity.SaveMoney">
+         select  * 
+         from tbl_savemoney
+         where  id = #{id}
+	</select>
+	  
+	<insert id="insert"  useGeneratedKeys="true" keyProperty="id">
+	  insert into tbl_savemoney(status,name,banner,link,create_time)
+	  values(#{status},#{name},#{banner},#{link},now()) 
+	</insert>   
+	 
+	<update id="update">
+	  update  tbl_savemoney
+      set 
+      status = #{status},
+      name = #{name},
+      banner = #{banner},
+      link = #{link},
+      create_time = now()
+	  where 
+	  id = #{id} 
+	</update>
+	
+	<delete id="delete">
+	   delete from  tbl_savemoney where  id = #{id}
+	</delete>
+	 
+</mapper>

@@ -1,0 +1,229 @@
+@charset "utf-8";
+/** CSS Document 
+* Dec: Base style 
+* Author: mumian@juanpi.com;
+* Date: 2015-03-09;
+**/
+.my-bag{background:#fff;margin-top:3%;width:100%;overflow:hidden;border-top:#e5e5e5 solid 1px;border-bottom:#e5e5e5 solid 1px}
+.my-bag .bag-list li a.box,.old-bag .bag-list li a.box{border-bottom:none}
+.bag-list li{position:relative;margin:0 0 0 3%;padding:3% 0;border-bottom:#e5e5e5 solid 1px;width:97%;overflow:hidden}
+.bag-list li:last-child{border-bottom:none}
+.bag-list li a.box{display:block;padding:3% 0;border-bottom:#e5e5e5 solid 1px}
+.bag-list li a.box:first-child{padding-top:0}
+.bag-list li a.box:last-child{border-bottom:none}
+.bag-list li a.box .pic{width:18%}
+.bag-list li a.box .pic img{width:100%;display:block}
+.bag-list li a.box .detail{margin-left:3%;width:55%}
+.bag-list li a.box .detail p.title{color:#333;margin-bottom:3%;font-size:12px}
+.bag-list li a.box .detail p.type{color:#999;line-height:22px;font-size:12px}
+.bag-list li a.box .detail p.type span{white-space:nowrap;text-overflow:ellipsis;display:block;float:left;width:120px;overflow:hidden}
+.bag-list li a.box .detail div.other{color:#999;line-height:22px;font-size:12px}
+.bag-list li a.box .price {text-align:right;margin-right:5%}
+.bag-list li a.box .price .current{color:#f8285c;font-size:14px}
+.bag-list li a.box .price .old{color:#999;text-decoration:line-through;font-size:12px}
+.bag-list li .num{margin-left:22%;margin-top:-2%}
+.bag-list li .del{display:block;position:absolute;right:5%;bottom:14%;background:url(../images/bag/del.png) no-repeat;background-size:cover;width:24px;height:24px}
+.bag-list li .del:active{background:url(../images/del-active.png) no-repeat;background-size:cover}
+.bag-list li .num .join{width:56px;text-align:center;background:#fff;border:#f8285c solid 1px;color:#f8285c;display:block;height:26px;line-height:26px;padding:0 7px;border-radius:4px}
+.bag-list li .num .join.over{color:#fff;background:#ccc;border-color:#ccc}
+.old-bag{background:#f2f2f2;border-top:#e5e5e5 solid 1px;border-bottom:#e5e5e5 solid 1px}
+.old-bag .old-tips{padding:3% 2%;color:#333;font-size:12px;border-bottom:#e5e5e5 solid 1px}
+.old-bag .bag-list li a.box .price .current{color:#999}
+.old-bag .bag-list li a.box .detail p.title{color:#999}
+.action-list.shopping-list{margin-bottom:0}
+.action-list.shopping-list a{font-size:16px}
+.action-list.shopping-list .coupon{color:#999;margin-right:7%}
+/*bag-total by mumian start*/
+.npage{ height:650px}
+.bag-total{padding:2% 0;background:#f7f7f7;
+    border-top: 1px solid #d9d9d9;
+    bottom: 0;
+    max-width: 640px;
+    min-width: 320px;
+    position: fixed;
+    width:100%;
+    z-index: 100}
+.bag-total .bag-money{margin-left:3%}
+.bag-total .go_pay{margin-right:3%}
+.bag-total .go_pay{
+	background: none repeat scroll 0 0 #f8285c;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+	padding:12px 0;
+    text-align: center;
+    width:34%}
+.bag-total .bag-money p{line-height:20px;font-size:12px}
+.bag-total .bag-money .count{color:#333;font-size:16px}
+.bag-total .bag-money.other .count{font-size:14px}
+.bag-total .bag-money.other .save{font-size:12px}
+.bag-total .bag-money .count .p{color:#f8285c}
+.bag-total .bag-money .count .t{color:#999;font-size:12px}
+.bag-total .bag-money .save{color:#999}
+/*bag-total by mumian end*/
+/*bag-alert*/
+#bag-alert .box{margin:0 auto;width:80%;padding:12% 5% 8%;background:#ececec;height:auto;overflow:hidden;border-radius:6px}
+.btn-all a{display:block;width:47%;padding:13px 0;text-align:center;margin-top:6%;border-radius:5px}
+.btn-all a.btn01{background:#fff;border:#e5e5e5 solid 1px}
+.btn-all a.btn02{background:#f8285c;border:#f8285c solid 1px;color:#fff}
+#bag-alert .txt{color:#333;font-size:16px;line-height:26px}
+/*this is bag-box start*/
+.bag-box{border-radius:6px;background:#ececec;margin:0 auto;width:90%;padding:3% 0 0;text-align:left;height:auto;overflow:hidden}
+.bag-box .txt{padding:0 0 3% 4%;font-size:12px}
+.bag-box .bag-list{background:#f7f7f7;padding:2% 2% 0}
+.bag-box .bag-list li a.box{margin-bottom:0}
+.bag-box .bag-list li a.box .detail{width:75%}
+.bag-box .btn-all{width:90%;padding:5%;height:auto;overflow:hidden}
+.bag-box .btn-all a{margin-top:0}
+/*this is bag-box end*/
+/*this is action-bag start*/
+.action-list.action-bag{margin-top:0}
+.action-list.action-bag li{position:relative;height:auto;line-height:30px;padding:12px 0;width:97%;height:auto;overflow:hidden}
+.action-list.action-bag li a{width:100%;height:auto;overflow:hidden}
+.action-list.action-bag li a div{width:100%}
+.action-list.action-bag li .cur{margin:0;position:absolute;top:50%;margin-top:-9px;right:3%}
+.action-list.action-bag li span.name,.action-list.action-bag li .phone{font-size:16px}
+.action-list.action-bag li span.name{margin-right:5px}
+.action-list.action-bag li span.address{color:#666;width:90%;float:left;line-height:24px}
+/*this is action-bag end*/
+/*this is pay-type*/
+.pay-type{width:94%;overflow:hidden;border-top:#e5e5e5 solid 1px;border-bottom:#e5e5e5 solid 1px;background:#fff;padding:10px 3%;font-size:16px;color:#333;line-height:30px;margin-bottom:2%}
+.pay-type span.type img{width:30px;vertical-align:middle;margin-left:5px}
+/*this is order-detail*/
+.order-detail{margin-top:3%;background:#fff;border-top:#e5e5e5 solid 1px;border-bottom:#e5e5e5 solid 1px}
+.order-detail .seller{height:22px;line-height:22px;overflow:hidden;color:#333;padding:3% 0 3% 3%;border-bottom:#e5e5e5 solid 1px}
+.order-detail .seller img{width:22px;margin-right:6px;vertical-align:top}
+.order-detail .bag-list li a.box .pic{width:22%}
+.order-detail .bag-list li a.box .detail{width:74%}
+.order-detail .bag-list li a.box .detail p.title{font-size:14px}
+.order-detail .bag-list li a.box .detail .other{color:#999}
+.order-detail .bag-list li div.normal{padding:3% 3% 3% 0;border-top:#e5e5e5 solid 1px;margin-top:-1px}
+.order-detail .bag-list li div.normal:last-child{border-bottom:none}
+.order-detail .bag-list li div.normal .rose{color:#666}
+.order-detail .bag-list li div.normal span.tip{color:#999;font-size:12px}
+.order-detail .activate-box{margin-right:2%;width:93%}
+.order-detail .activate-box .activate-key{font-size:12px}
+.order-detail .activate-box.message{background:#ececec;border-color:#ececec}
+.order-detail .activate-box.message span{color:#999}
+/*this is address-show by mumian start*/
+.address-show{width:100%;background:#fff;margin-bottom:3%;border-bottom:#e5e5e5 solid 1px}
+.address-show li{padding:3% 0;margin-left:3%;width:97%;height:auto;overflow:hidden;border-bottom:#e5e5e5 solid 1px;line-height:30px}
+.address-show li:last-child{border-bottom:none}
+.address-show li span{color:#999;width:25%}
+.address-show li span em{color:#f36;margin-right:3px}
+.address-show li .normal-input{
+    border: 0 none;
+    height: 30px;
+	width:70%;
+	font-size:14px;
+}
+.address-show li .tbl-cell{display:table-cell}
+.address-show li .tbl-cell label{color:#333}
+.new-p-re {
+    position: relative;
+}
+.new-select {
+    height: 30px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+option {
+    height: 24px;
+    line-height: 24px;
+    padding: 3px;
+}
+.normal-area{
+	border: 0 none;
+    height: 40px;
+	line-height:20px;
+	width:70%;
+	font-size:14px;
+	margin:5px 0;
+}
+/*this is address-show by mumian end*/
+.action-list .switch{margin:7px 3% 0 0;background:#4bd562;width:60px;height:36px;border-radius:20px}
+.action-list .switch span{width:32px;height:32px;border-radius:20px;display:block;background:#fff;float:right;margin:2px 2px 0 0}
+.action-list .switch.no{background:#ccc}
+.action-list .switch.no span{float:left;margin:2px 0 0 2px}
+/*this is my-address by mumian start*/
+.my-address{width:100%;height:auto;overflow:hidden;background:#fff}
+.my-address li.normal{position:relative;padding:3%;border-bottom:#e5e5e5 solid 1px;line-height:26px}
+.my-address li.normal span.name,.my-address li.normal span.phone{color:#333;font-size:16px}
+.my-address li.normal span.name{margin-right:5px}
+.my-address li.normal span.default{font-size:12px;background:#f9537d;padding:0.5px 5px;margin-left:5px;color:#fff;border-radius:2px;display:inline-block;height:16px;line-height:16px}
+.my-address li.normal span.address{width:70%;display:block}
+/*this is my-address by mumian end*/
+/*this is success-show by mumian start*/
+.success-show{width:100%;height:auto;overflow:hidden}
+.success-show .success-tip{color:#808080;background:#fff;padding:6% 0 5% 0;text-align:center;font-size:16px}
+.success-show .success-tip img{width:120px;margin-bottom:10px}
+.success-show .success-tip .only_time{color:#f8285c;padding:2% 0 0}
+/*this is success-show by mumian end*/
+/*this is pay-goods-detail by mumian*/
+.pay-goods-detail{background:#ececec;padding:0 0 5% 0;width:100%;overflow:hidden}
+.pay-goods-detail ul{background:#f7f7f7;border-bottom:#e5e5e5 solid 1px;border-top:#e5e5e5 solid 1px}
+.pay-goods-detail li{padding:3% 3% 3% 0;margin-left:3%;border-bottom:#e5e5e5 solid 1px}
+.pay-goods-detail li:last-child{border-bottom:none}
+.pay-goods-detail .txt{font-size:12px;color:#999;margin:4% 0 0;text-align:center}
+.change_btn{ padding: 0 3%}
+.change_btn a{display:block;color:#fff;font-size:16px;width:48%;padding:12px 0;background:#f8285c; border-radius:5px;margin:4% auto;text-align:center}
+.change_btn .look-order{ background: #fff; color: #666; margin-right: 4%}
+/*this is contact-detail*/
+.contact-detail{border-top:#e5e5e5 solid 1px;padding:10% 0}
+.contact-detail .contact{height:18px;line-height:18px;display:block;width:40%;text-align:center;padding:3% 0;border:#e5e5e5 solid 1px;background:#fff;margin:0 auto;border-radius:5px}
+.contact-detail .contact img{height:18px;vertical-align:top;margin-right:3px}
+/*this is my-order*/
+.my-order .bag-list li a.box{margin-bottom:0;padding-bottom:0}
+.my-order .bag-list li:first-child{border-bottom:#e5e5e5 solid 1px !important}
+.order-state{padding:4% 3%;border-bottom:#e5e5e5 solid 1px}
+.order-state .state{color:#f8285c}
+.order-state .state.other{color:#999}
+.order-state .time{color:#999;font-size:12px}
+.my-order .go_see{padding:2% 0;margin:0 3%;background:#f2f2f2;text-align:center;color:#999}
+.my-order .go_see a{color:#999;font-size:12px;display:block}
+.my-order .go_see img{margin-left:2px;
+    vertical-align:-2px;
+    width: 14px;opacity:.8}
+/*this is pay-detail*/
+.pay-detail{padding:3%;width:94%;overflow:hidden;height:34px;line-height:34px}
+.pay-detail .pay-all{color:#333}
+.pay-detail .pay-all em{color:#f8285c}
+.pay-detail .go-pay{background:#f8285c;border:#f8285c solid 1px;color:#fff;text-align:center;width:80px;text-align:center;border-radius:5px;margin-left:2%}
+.pay-detail .go-pay.go-see{background:#fff;border-color:#999;color:#999}
+/*this is bag-tips*/
+.bag-tips{font-size:12px;background:#ececec;color:#999;text-align:center;padding:4% 0;border-bottom:#e5e5e5 solid 1px;line-height:22px}
+.bag-tips a{color:#f8285c;text-decoration:underline}
+/*this is wuliu-detail start*/
+.wuliu-detail{background:#fff;margin-bottom:2%;border-bottom:#e5e5e5 solid 1px;border-top:#e5e5e5 solid 1px}
+.wuliu-detail:first-child{border-top:none}
+.wuliu-detail h2{font-size:16px;font-weight:normal;margin-left:3%;padding:3% 0;border-bottom:#e5e5e5 solid 1px}
+.wuliu-detail .bag-list a.box{margin-bottom:0}
+.wuliu-detail .company{margin:0 3%;padding:3% 0;width:96%;height:52px;overflow:hidden;line-height:26px;border-bottom:#e5e5e5 solid 1px}
+.wuliu-detail .company .company-icon{margin-right:10px}
+.wuliu-detail .company .company-icon img{width:52px;border-radius:25%}
+.wuliu-detail .infor{padding:3% 3% 0;width:94%}
+.wuliu-detail .infor ul{
+    border-left:3px solid #ececec;
+    height: auto;
+    width: 92%;margin:0 4%}
+.wuliu-detail .infor ul li{position:relative;border-bottom:#e5e5e5 solid 1px;padding:2% 0;margin-left:3%;line-height:22px;color:#999}
+.wuliu-detail .infor ul.other{border-left:none}
+.wuliu-detail .infor ul li:first-child{padding-top:0}
+.wuliu-detail .infor ul li:last-child{border-bottom:none}
+.wuliu-detail .infor ul li em.normal{position:absolute;top:13%;left:-4%;background:url(../images/normal-icon.png) no-repeat #fff;width:12px;height:12px;background-size:cover;margin-left:-4px}
+.wuliu-detail .infor ul li.cur em.normal{background:url(../images/active-icon.png) no-repeat #fff;background-size:cover;height:20px;width:20px;margin-left:-8px;top:0}
+.wuliu-detail .infor ul li.cur{color:#f8285c}
+.wuliu-detail .infor .empty{color:#f8285c;padding-bottom:3%}
+/*this is wuliu-detail end*/
+/*this is bag-area start*/
+.bag-area{height:220px;overflow:auto}
+.bag-area .bag-list li a.box{padding-bottom:0}
+/*this is bag-area end*/
+
+/*weixin jp start by xiaoxiong 20150402*/
+.my-address li.normal span.wx{ background: #3fb838}

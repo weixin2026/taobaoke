@@ -1,0 +1,56 @@
+@charset "utf-8";
+.suggest{display:none}
+.suggest.dropdown  {	    
+	position:absolute;
+	display:block;
+	top:50px;
+	max-height:332px;
+	right:37px;
+	width:200px;
+	z-index:1000;
+	margin-top:10px;
+	font-size:12px;
+	background-color:#fff;
+	-webkit-background-clip:padding-box;
+	background-clip:padding-box;	
+	box-sizing:border-box;	
+}
+.suggest.dropdown .dropdown-menu li {
+padding:5px 0
+}
+.suggest.dropdown .dropdown-menu li a {
+background-color:transparent
+}
+.npage{ height:650px}
+.suggest.dropdown .dropdown-menu li:hover  a {
+color:#F50
+}
+.suggest.dropdown .dropdown-menu {
+max-height:332px;
+box-shadow:0 2px 4px 0 rgba(32,32,64,.16)
+}
+.dropdown .dropdown-menu li {
+padding:4px 10px
+}
+.dropdown .dropdown-header,.dropdown .dropdown-menu li a {
+display:block;
+padding:3px 8px;
+line-height:1.42857143;
+white-space:nowrap
+}
+.dropdown .dropdown-menu li a {
+clear:both;
+font-weight:400;
+color:#333
+}
+.dropdown .dropdown-menu li a:focus,.dropdown .dropdown-menu li a:hover {
+background-color:#f5f5f5;
+color:#262626;
+border-radius:4px;
+text-decoration:none
+}
+.dropdown .dropdown-menu .active a,.dropdown .dropdown-menu .active a:focus,.dropdown .dropdown-menu .active a:hover {
+background-color:#fa6419;
+color:#fff;
+border-radius:4px
+}

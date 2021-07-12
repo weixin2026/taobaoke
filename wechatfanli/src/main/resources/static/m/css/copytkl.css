@@ -1,0 +1,61 @@
+.yhq_fc_title{ text-align:center; font-size:16px; line-height:40px; height:40px; background-color:#ff464e; color:#fff; border-top:#e4e4e4 1px solid; border-left:#e4e4e4 1px solid; border-right:#e4e4e4 1px solid; border-top-left-radius:8px; border-top-right-radius:8px}
+.wxts{font-size:12px;color:#f90c49;padding-left:10px}
+.wxts2{font-size:12px;color:#071efb;padding-left:10px}
+.am-close {
+    float:right;
+    font-size: 36px;
+    margin-top:3px;
+    margin-right:10px;
+    color: white;
+    font-weight: 100;
+    opacity: 1;
+}
+.nbmenu{
+    position: fixed;
+    width: 100%;
+    max-width:640px;
+    height: 50px;
+    line-height: 50px;
+    display: -webkit-box;
+    z-index: 10000;
+    background:#FAFAFA;
+    color:#ffffff;
+    font-size:12px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.nbnav{
+    position: absolute;
+    z-index:10001;
+    width:13.3%;float:left;
+}
+
+.nbnav2{
+    position: absolute;
+    z-index:10001;
+    width:30%;float:left;
+}
+
+.nb-btn1{bottom:0;left:0;color:#666;text-align:center;line-height: 22px}
+.nb-btn1 .icon{background:url(../images/home.png) no-repeat center center;background-size:contain;height:21px}
+.nb-btn2{bottom:0;left:17%;color:#666;text-align:center;line-height: 22px}
+.nb-btn2 .icon{background:url(../images/share.png) no-repeat center center;background-size:contain;height:21px}
+.nb-btn5{bottom:0;left:24%;color:#666;text-align:center;line-height: 22px}
+.nb-btn5 .icon{background:url(../images/share.png) no-repeat center center;background-size:contain;height:21px}
+.nb-btn3{bottom:0;left:40%;background: #FB874E;text-align:center}
+.nb-btn3 a{color:#ffffff}
+.nb-btn4{bottom:0;left:70%;background: #f54d23;text-align:center}
+.nb-btn4 a{color:#ffffff}
+
+.tkl-div{display:none;background-color:#fff;box-shadow:0 0 5px 2px #ddd;z-index:200}
+.tkl-div .tkl-div-header{position:relative;height:45px;line-height:45px;text-align:center;background-color:#f54d23;color:#fff}
+.tkl-div .tkl-div-header i{position:absolute;top:0;right:15px}
+.tkl-div .tkl-div-body .tkl-div-body-top{border:1px dashed #eee;height:60px;margin:5px;padding:10px 15px;text-align:center;overflow:scroll}
+.tkl-div .tkl-div-body .tkl-div-body-middle{padding:5px;font-size:13px}
+.tkl-div .tkl-div-body .tkl-div-body-middle:first-child{font-size:16px}
+.tkl-div .tkl-div-body .tkl-div-body-middle p{padding:5px;color:#FB874E}
+.tkl-div .tkl-div-body .tkl-div-body-middle p:first-child{color:#f54d23;font-size:16px}
+.tkl-div .tkl-div-body .tkl-div-body-bottom{margin-bottom:15px;text-align:center}
+.tkl-div .tkl-div-body .tkl-div-body-bottom button{width:60%;height:40px;line-height:40px;outline:none;border:none;background-color:#f54d23;color:#fff}

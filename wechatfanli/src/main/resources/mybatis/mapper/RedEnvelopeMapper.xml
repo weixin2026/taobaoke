@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jjld.coupon.web.mapper.RedEnvelopeMapper">
+    <resultMap type="com.jjld.coupon.web.entity.RedEnvelope" id="resultMap">
+        <id column="id" property="id"/>
+        <result  column="type" property="type"/>
+        <result  column="name" property="name"/>
+        <result  column="kl" property="kl"/>
+        <result  column="content" property="content"/>
+        <result  column="create_time" property="createTime"/>
+    </resultMap>
+      
+     
+	<select id="findRedEnvelopeByid" resultType="com.jjld.coupon.web.entity.RedEnvelope">
+         select  * 
+         from tbl_redenvelope
+         where  id = #{id}
+	</select>
+	  
+	<insert id="insert"  useGeneratedKeys="true" keyProperty="id">
+	  insert into tbl_redenvelope(type,name,kl,content,create_time)
+	  values(#{type},#{name},#{kl},#{content},now()) 
+	</insert>   
+	 
+	<update id="update">
+	  update  tbl_redenvelope
+      set 
+      type = #{type},
+      name = #{name},
+      kl = #{kl},
+      create_time = now()
+	  where 
+	  id = #{id} 
+	</update>
+	
+	<delete id="delete">
+	   delete from  tbl_redenvelope where  id = #{id}
+	</delete>
+	 
+</mapper>

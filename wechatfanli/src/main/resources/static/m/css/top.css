@@ -1,0 +1,13 @@
+*{margin:0; padding:0}
+a{text-decoration: none}
+img{max-width: 100%; height: auto}
+#weixin-tip{display: none; position: fixed; left:0; top:0; bottom:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80);  height: 100%; width: 100%; z-index: 10000000}
+#weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%}
+#weixin-tip .close{color:#fff;padding:5px;font:bold 20px/24px simsun;text-shadow:0 1px 0 #ddd;position:absolute;top:0;left:5%}
+#xywxobg{display:none;position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:9998}
+#weixin-tt.quanpost {position:fixed;left:50%;top:20%;bottom:auto;width:80%;height:auto;margin:0 0 0 -40%;background:#fff;border-radius:12px;z-index:9999}
+.xywxti{text-align:center;font-size:18px}
+.xywxti1{text-align:center;font-size:18px;background:#888}
+#weixin-tt.quanpost .fq-goods{padding:10px;font-size:12px;line-height:30px}
+#weixin-tt .copybtn{width:85%;margin-top:10px;color:#fff;text-align:center;padding:15px 0;font:bold 16px/20px simsun;background:#f30;border-radius:6px;border:0}
+#uc_recommend_ad{position:absolute;left:0;top:0;z-index:-1}
